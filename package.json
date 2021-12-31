@@ -20,12 +20,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {
-    "./**/**/*.{json,js}": [
-      "npm run lint",
-      "npm run format"
-    ]
-  },
   "keywords": [
     "mongoose",
     "fuzzy",
@@ -44,17 +38,26 @@
     "mongoose": "5.10.x"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.11.0",
+    "eslint-plugin-mocha-no-only": "^1.1.1",
     "eslint-plugin-prettier": "^3.1.3",
     "husky": "^4.2.5",
-    "jest": "^26.0.1",
+    "jest": "^27.4.5",
     "lint-staged": "^10.2.2",
     "mongodb-memory-server": "^6.6.0",
     "mongoose": "^5.10.11",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "dot-object": "^2.1.4",
+    "dot-prop": "^6.0.1",
+    "object-path": "^0.11.8"
   }
 }

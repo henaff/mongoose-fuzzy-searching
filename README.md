@@ -1,3 +1,7 @@
+# Fork #
+
+_This fork aim to add better handling for mongoose's dot notation and fix issues with array handling by adding an array boolean option for fields_
+
 # Mongoose Fuzzy Searching
 
 mongoose-fuzzy-searching is simple and lightweight plugin that enables fuzzy searching in documents in MongoDB.
@@ -8,25 +12,29 @@ This code is based on [this article](https://medium.com/xeneta/fuzzy-search-with
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FVassilisPallas%2Fmongoose-fuzzy-searching.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FVassilisPallas%2Fmongoose-fuzzy-searching?ref=badge_shield)
 
-- [Features](#features)
-- [Install](#install)
-- [Getting started](#getting-started)
-  - [Initialize plugin](#initialize-plugin)
-  - [Plugin options](#plugin-options)
-    - [Fields](#fields)
-      - [String field](#string-field)
-      - [Object field](#object-field)
-    - [Middlewares](#middlewares)
-- [Query parameters](#query-parameters)
-  - [Instance method](#instance-method)
-  - [Query helper](#query-helper)
-- [Working with pre-existing data](#working-with-pre-existing-data)
-  - [Update all pre-existing documents with ngrams](#update-all-pre-existing-documents-with-ngrams)
-  - [Delete old ngrams from all documents](#delete-old-ngrams-from-all-documents)
-- [Testing and code coverage](#testing-and-code-coverage)
-  - [All tests](#all-tests)
-  - [Available test suites](#available-test-suites)
-- [License](#license)
+- [Fork](#fork)
+- [Mongoose Fuzzy Searching](#mongoose-fuzzy-searching)
+  - [Features](#features)
+  - [Install](#install)
+  - [Getting started](#getting-started)
+    - [Initialize plugin](#initialize-plugin)
+    - [Plugin options](#plugin-options)
+      - [Fields](#fields)
+        - [String field](#string-field)
+        - [Object field](#object-field)
+      - [Middlewares](#middlewares)
+  - [Query parameters](#query-parameters)
+    - [Instance method](#instance-method)
+    - [Query helper](#query-helper)
+  - [Working with pre-existing data](#working-with-pre-existing-data)
+    - [Update all pre-existing documents with ngrams](#update-all-pre-existing-documents-with-ngrams)
+    - [Delete old ngrams from all documents](#delete-old-ngrams-from-all-documents)
+  - [Testing and code coverage](#testing-and-code-coverage)
+    - [All tests](#all-tests)
+    - [Available test suites](#available-test-suites)
+      - [unit tests](#unit-tests)
+      - [Integration tests](#integration-tests)
+  - [License](#license)
 
 ## Features
 

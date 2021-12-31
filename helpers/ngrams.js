@@ -65,27 +65,23 @@ const nGrams = (constants) => (text, minSize, prefixOnly) => {
  * @param {boolean} prefixOnly -Only return ngrams from start of word.
  * @return {Array} The sequence of characters in Array of Strings.
  */
-const makeNGrams = (constants, replaceSymbols) => (
-  text,
-  escapeSpecialCharacters,
-  minSize,
-  prefixOnly,
-) => {
-  if (!text) {
-    return [];
-  }
+const makeNGrams =
+  (constants, replaceSymbols) => (text, escapeSpecialCharacters, minSize, prefixOnly) => {
+    if (!text) {
+      return [];
+    }
+    const result = text
+      .split(' ')
+      .map((q) =>
+        nGrams(constants)(
+          replaceSymbols(q, escapeSpecialCharacters),
+          minSize || constants.DEFAULT_MIN_SIZE,
+          prefixOnly || constants.DEFAULT_PREFIX_ONLY,
+        ),
+      )
+      .reduce((acc, arr) => acc.concat(arr), []);
 
-  const result = text
-    .split(' ')
-    .map((q) =>
-      nGrams(constants)(
-        replaceSymbols(q, escapeSpecialCharacters),
-        minSize || constants.DEFAULT_MIN_SIZE,
-        prefixOnly || constants.DEFAULT_PREFIX_ONLY,
-      ),
-    )
-    .reduce((acc, arr) => acc.concat(arr), []);
-  return addWholePhrase(Array.from(new Set(result)), text);
-};
+    return addWholePhrase(Array.from(new Set(result)), text);
+  };
 
 module.exports = { nGrams, makeNGrams };

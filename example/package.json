@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-modules --es-module-specifier-resolution=node --trace-warnings  -r dotenv/config index.js",
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "dot-object": "^2.1.4",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15"
+  }
+}
