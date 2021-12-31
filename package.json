@@ -15,11 +15,6 @@
     "test:unit:watch": "npm run test:unit --watch",
     "test:integration:watch": "npm run test:integration --watch"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "keywords": [
     "mongoose",
     "fuzzy",
