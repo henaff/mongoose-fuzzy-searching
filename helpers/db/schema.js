@@ -3,19 +3,25 @@ const createSchemaObject = (typeValue, options) => ({
   type: typeValue,
 });
 
-const addToSchema = (name) => ({
-  [`${name}_fuzzy`]: createSchemaObject([String], {
-    default: '',
-    index: false,
-  }),
-});
+const addToSchema = (name) => {
+  let data = ({
+    [`${name}_fuzzy`]: createSchemaObject([String], {
+      default: '',
+      index: false,
+    }),
+  })
+  return data
+};
 
-const addArrayToSchema = (MixedType) => (name) => ({
-  [`${name}_fuzzy`]: createSchemaObject(MixedType, {
-    default: [],
-    index: false,
-  }),
-});
+const addArrayToSchema = (MixedType) => (name) => {
+  let data = ({
+    [`${name}_fuzzy`]: createSchemaObject(MixedType, {
+      default: [],
+      index: false,
+    }),
+  })
+  return data
+};
 
 const setTransformers = (isFunction) => (hideElements) => (schema) => {
   let toObjectTransform;

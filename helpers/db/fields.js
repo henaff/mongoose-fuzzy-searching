@@ -150,7 +150,7 @@ class Generate {
             attrs.push(obj);
           });
           // eslint-disable-next-line prefer-destructuring
-          this.attributes[operator][`${item.name}_fuzzy`] = attrs[0];
+          this.attributes[operator][`${item.name}_fuzzy`] = item.array === true ? attrs : attrs[0];
         }
       });
       const updateOperators = ['$set', '$unset', '$inc', '$mul'];
@@ -178,7 +178,7 @@ class Generate {
             attrs.push(obj);
           });
           // eslint-disable-next-line prefer-destructuring
-          this.attributes[operator][`${item.name}_fuzzy`] = attrs[0];
+          this.attributes[operator][`${item.name}_fuzzy`] = item.array === true ? attrs : attrs[0];
         } else {
           item.keys.forEach((key) => {
             if (this.attributes[operator] && this.attributes[operator][`${item.name}.${key}`]) {

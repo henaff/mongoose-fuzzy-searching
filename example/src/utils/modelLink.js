@@ -63,6 +63,10 @@ export class ModelLink {
     if (this.array) {
       const qExists = { [`${this.foreignField}.$._id`]: this._self._id }
       const exists = await this.model.exists(qExists)
+      console.log({
+        qExists,
+        exists,
+      })
       const operator = exists ? '$set' : '$push'
       let operation = Object
         .entries(this.fields)
