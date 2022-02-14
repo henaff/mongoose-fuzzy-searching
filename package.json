@@ -30,7 +30,7 @@
   "homepage": "https://github.com/VassilisPallas/mongoose-fuzzy-searching",
   "license": "MIT",
   "peerDependencies": {
-    "mongoose": "5.10.x"
+    "mongoose": "6.x.x"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.1",
